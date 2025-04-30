@@ -1,25 +1,16 @@
-import nodeResolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
+import { rollupImport } from '@shgysk8zer0/rollup-import';
+import { importmap } from '@shgysk8zer0/importmap';
 
 export default [{
-	input: 'index.js',
-	plugins: [nodeResolve()],
+	input: 'md-editor.js',
+	plugins: [terser(), rollupImport(importmap)],
 	output: [{
-		file: 'index.cjs',
+		file: 'md-editor.cjs',
 		format: 'cjs',
 	}, {
-		file: 'index.min.js',
-		format: 'iife',
-		plugins: [terser()],
-		sourcemap: true,
-	}, {
-		file: 'index.mjs',
+		file: 'md-editor.min.js',
 		format: 'module',
+		sourcemap: true,
 	}],
-}, {
-	input: 'consts.js',
-	output: {
-		file: 'consts.cjs',
-		format: 'cjs',
-	}
 }];
