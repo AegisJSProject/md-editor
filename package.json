@@ -85,7 +85,7 @@
   },
   "homepage": "https://github.com/AegisJSProject/md-editor#readme",
   "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-terser": "^1.0.0",
     "@shgysk8zer0/eslint-config": "^1.0.4",
     "@shgysk8zer0/http-server": "^1.1.1",
     "@shgysk8zer0/importmap": "^1.4.60",
